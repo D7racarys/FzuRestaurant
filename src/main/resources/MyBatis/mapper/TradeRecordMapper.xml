@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD web.mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace可用于区分相同id，id是SQL语句的唯一标识，resultType为返回类型，写为类名-->
+<mapper namespace="MyBatis.mapper.TradeRecordMapper">
+    
+
+
+
+    <select id="selectAll" resultType="tradeRecord">
+        select clientsId, dishType, dishNum, orderTime, finishTime
+            from TradeRecord
+                order by orderTime desc;
+    </select>
+    <select id="selectByCons" resultType="TradeRecord">
+        select * from TradeRecord
+            where clientsID = #{id} or dishType like #{id};
+    </select>
+
+</mapper>

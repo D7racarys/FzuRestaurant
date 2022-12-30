@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD web.mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace可用于区分相同id，id是SQL语句的唯一标识，resultType为返回类型，写为类名-->
+<mapper namespace="MyBatis.mapper.DishMapper">
+    <insert id="addDish">
+        insert into Dish
+            values(#{name},#{ingredient},#{price});
+    </insert>
+
+    <update id="updateDish">
+        update Dish
+        <set>
+            <if test="ingredient != null and ingredient != ''">
+                ingredient = #{ingredient},
+            </if>
+            <if test="price != null">
+                price = #{price}
+            </if>
+        </set>
+        where name = #{name};
+    </update>
+    <delete id="deleteDish">
+        delete from dish where name = #{name};
+    </delete>
+
+    <select id="selectAll" resultType="MyBatis.pojo.Dish.Dish">
+        select * from Dish;
+    </select>
+    <select id="selectByType" resultType="MyBatis.pojo.Dish.Dish">
+        select * from dish
+            where name like #{name};
+    </select>
+
+</mapper>

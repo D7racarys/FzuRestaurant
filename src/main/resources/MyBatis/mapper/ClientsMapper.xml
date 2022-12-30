@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD web.mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace可用于区分相同id，id是SQL语句的唯一标识，resultType为返回类型，写为类名-->
+<mapper namespace="MyBatis.mapper.ClientsMapper">
+
+
+    <select id="selectAll" resultType="clients">
+        select * from Clients;
+    </select>
+
+    <select id="selectByIdPwd" resultType="clients">
+        select * from Clients
+        where id = #{id} and password = #{password};
+    </select>
+
+</mapper>
