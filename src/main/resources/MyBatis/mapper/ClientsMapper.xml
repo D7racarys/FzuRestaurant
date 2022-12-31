@@ -5,6 +5,10 @@
 
 <!--namespace可用于区分相同id，id是SQL语句的唯一标识，resultType为返回类型，写为类名-->
 <mapper namespace="MyBatis.mapper.ClientsMapper">
+    <insert id="addClient">
+        insert into clients values
+        (#{id}, #{password}, #{account});
+    </insert>
 
 
     <select id="selectAll" resultType="clients">
@@ -14,6 +18,10 @@
     <select id="selectByIdPwd" resultType="clients">
         select * from Clients
         where id = #{id} and password = #{password};
+    </select>
+    <select id="selectById" resultType="clients">
+        select * from clients
+        where id = #{id};
     </select>
 
 </mapper>
