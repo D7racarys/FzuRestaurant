@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb7b37d9-64a3-4ba1-a62a-9d8112556d37" name="变更" comment="login">
-      <change beforePath="$PROJECT_DIR$/src/main/java/MyBatis/mapper/ClientsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyBatis/mapper/ClientsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/sevice/cater/CaterLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/sevice/cater/CaterLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/sevice/client/ClientLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/sevice/client/ClientLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/web/sevice/client/ClientRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/sevice/client/ClientRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MyBatis/mapper/ClientsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MyBatis/mapper/ClientsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2022_12_30_19_13____.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2022_12_30_19_13____.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
