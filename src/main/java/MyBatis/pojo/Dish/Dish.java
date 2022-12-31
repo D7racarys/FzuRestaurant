@@ -1,7 +1,13 @@
 package MyBatis.pojo.Dish;
 
-public interface Dish {
-    double getPrice();
-    //猪肉类、牛肉类、羊肉类、水产类、豆制品类、蔬菜类、鸡蛋类、主食类
-    String toString();
+public class Dish {
+    protected String name;
+    protected String ingredient;
+    protected double price;
+
+
+    public double getPrice() {
+        System.out.println("正在调用父类dish的价格");
+        return 0;
+    }
 }
