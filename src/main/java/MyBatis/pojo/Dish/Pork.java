@@ -1,13 +1,13 @@
 package MyBatis.pojo.Dish;
 
-public class Pork implements Dish{
-    String name = "pork";
-    String ingredient = "pork";
-    float price = 10.0f;
+public class Pork extends Dish{
 
     private static Pork instance = null;
 
-    private Pork() {}
+    private Pork() {
+        this.name = "pork";
+        this.ingredient = "pork";
+        this.price = 10.0;}
 
     private Pork(String name, String ingredient, float price){
         this.name = name;
@@ -26,7 +26,5 @@ public class Pork implements Dish{
         return instance.price;
     }
 
-    public String toString(){
-        return "[name:"+instance.name+",ingredients:"+instance.ingredient+"price:"+instance.price+"]";
-    }
+
 }
