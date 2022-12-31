@@ -27,9 +27,7 @@ public class ClientLogin extends HttpServlet {
 
         String json = br.readLine();// 得到json
 
-        System.out.println(json);
-
-        System.out.println("开始");
+        System.out.println("clientsLogin"+json);
 
         Map map = JSON.parseObject(json, Map.class);
 
