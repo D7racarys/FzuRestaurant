@@ -22,9 +22,6 @@ public class Mutton extends Dish{
 
     }
 
-    public double getPrice(){
-        return instance.price;
-    }
 
 
 }

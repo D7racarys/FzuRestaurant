@@ -22,9 +22,5 @@ public class Eggs extends Dish{
 
     }
 
-    public double getPrice(){
-        return instance.price;
-    }
-
 
 }

@@ -21,9 +21,5 @@ public class Beef extends Dish{
         return instance;
 
     }
-    public double getPrice(){
-        return instance.price;
-    }
-
 
 }

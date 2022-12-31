@@ -22,9 +22,5 @@ public class Vegetables extends Dish{
 
     }
 
-    public double getPrice(){
-        return instance.price;
-    }
-
 
 }

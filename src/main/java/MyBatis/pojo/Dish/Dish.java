@@ -7,10 +7,15 @@ public class Dish {
 
 
     public double getPrice() {
-        System.out.println("正在调用父类dish的价格");
-        return 0;
+        return this.price;
     }
     public String toString(){
         return "[name:"+this.name+",ingredients:"+this.ingredient+",price:"+this.price+"]";
+    }
+    public String getName(){
+        return this.name;
+    }
+    public String getIngredient(){
+        return this.ingredient;
     }
 }
