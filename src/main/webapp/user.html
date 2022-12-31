@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户页面登入</title>
+  <link rel="stylesheet" href="user_sign.css">
+</head>
+
+<body>
+<span class="up">
+        <a href="javascript:;">注册 </a>
+    </span>
+<!-- 登录 -->
+<span class="in">
+        <a href="javascript:;">登入</a>
+    </span>
+<!-- 注册弹窗 -->
+<div class="sign_up">
+  <!-- 关闭的小图标 -->
+  <div class="close1"></div>
+  <form id="signupForm">
+    <!--用户邮箱-电子邮件-->
+    <p class="one">
+      <input type="email" name="email" placeholder="请输入邮箱" id="email_signup">
+    </p>
+
+    <!--登录昵称-文本框-->
+    <p class="two">
+      <input type="text" id="uname" name="uname" placeholder="请输入3~12位字符的昵称">
+      <!--提示用户名是否一致的位置-->
+      <span id="uname-show"></span>
+    </p>
+
+    <!--登录密码-密码框-->
+    <p class="three">
+      <input type="password" id="upwd_signup" name="upwd" placeholder="请输入8~16位密码">
+      <!--name值与id值可以重复，name值用于提交给服务器，id值在前端用-->
+      <span class="message" id="mess1"></span>
+    </p>
+
+    <!--确认密码-密码框-->
+    <p class="four">
+      <input type="password" id="cpwd" name="cpwd" placeholder="确认密码">
+      <!--用于提示两次密码是否一致的位置-->
+      <span class="message" id="mess2"></span>
+    </p>
+
+    <!--注册按钮-->
+    <p class="five">
+      <input type="submit" value="注册" id="btn">
+      <!--submit按钮的表单提交数据，是同步访问数据的方式-->
+    </p>
+  </form>
+</div>
+<!-- 登入弹窗 -->
+<div class="sign_in">
+  <form id="signinForm">
+    <!-- 关闭的小图标 -->
+    <div class="close2"></div>
+    <!-- 用户登录的邮箱 -->
+    <p class="in_one">
+      <input type="email" name="email" placeholder="请输入邮箱" id="email_signin">
+    </p>
+    <!-- 用户的登录密码 -->
+    <p class="in_two">
+      <input type="password" id="upwd_signin" name="upwd" placeholder="请输入8~16位密码">
+    </p>
+    <!-- 登录按钮 -->
+    <p class="in_three">
+      <input type="submit" value="登录" id="signin">
+    </p>
+  </form>
+</div>
+<!--</div>-->
+<script>
+        //点击注册后跳出注册弹窗
+        //确认密码位数是否合法
+        var flag1 = 0;
+        var up = document.querySelector('.up');
+        var up_page = document.querySelector('.sign_up');
+        var close1 = document.querySelector('.close1');
+        var btn = document.querySelector('#btn');
+        var flag2 = 0;
+
+        function lock() {
+            if (flag1 == 0 || flag2 == 0) {
+                btn.disabled = 'disabled';
+            }
+            else {
+                btn.disabled = '';
+            }
+        }
+
+        up.onclick = function () {
+            up_page.style.display = 'block';
+        }
+        close1.onclick = function () {
+            up_page.style.display = 'none';
+        }
+
+        lock();
+
+        var pd = document.querySelector('#upwd_signup');
+        var mess = document.querySelector('#mess1');
+        pd.onblur = function () {
+            if (this.value.length < 6 || this.value.length > 16) {
+                mess.className = 'message wrong';
+                flag1 = 0;
+            }
+            else {
+                mess.className = 'message right';
+                flag1 = 1;
+            }
+            lock();
+        }
+
+        var rpd = document.querySelector('#cpwd');
+        var mess2 = document.querySelector('#mess2');
+        rpd.onblur = function () {
+            if (this.value == pd.value && pd.value != '') {
+                mess2.className = 'message right';
+                flag2 = 1;
+            }
+            else {
+                mess2.className = 'message wrong';
+                flag2 = 0;
+            }
+            lock();
+        }
+
+
+    </script>
+
+<script>
+        var sin = document.querySelector('.in');
+        var in_page = document.querySelector('.sign_in');
+        var close2 = document.querySelector('.close2');
+        sin.onclick = function () {
+            in_page.style.display = 'block';
+        }
+        close2.onclick = function () {
+            in_page.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+
+h2 {
+    left: 112px;
+    top: 242px;
+    width: 216px;
+    height: 58px;
+    color: rgba(10, 109, 251, 1);
+    font-size: 54px;
+    text-align: center;
+    font-family: ZKXiaoWeiLogo-regular;
+}
+
+.up,
+.in {
+
+    display: inline-block;
+    left: 97px;
+    top: 226px;
+    width: 182px;
+    height: 55px;
+    border-radius: 4px;
+    background-color: rgba(147, 210, 243, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    text-align: center;
+    font-family: Microsoft Yahei;
+}
+
+.up {
+    position: relative;
+    left: 210px;
+    top: 231px;
+}
+
+.up a {
+    display: inline-block;
+    width: 129px;
+    height: 50px;
+    background-image: url(../imagines/signup.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.in {
+    position: relative;
+    top: 381px;
+    left: 24px;
+}
+
+.in a {
+    display: inline-block;
+    width: 129px;
+    height: 50px;
+    background-image: url(../imagines/signin.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* 注册弹窗的相关设置 */
+.sign_up {
+    /* left: 485px; */
+    /* top: 326px; */
+    margin: 0 auto;
+    top: 50%;
+    width: 275px;
+    height: 300px;
+    line-height: 20px;
+    border-radius: 26px;
+    background-color: rgba(255, 250, 250, 1);
+    text-align: center;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(79, 79, 79, 1);
+    z-index: 20;
+    display: none;
+}
+
+/* 密码检验的设置 */
+.message {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    color: #999;
+    background: url(../imagines/tanhao.png) no-repeat left center;
+    padding-left: 20px;
+}
+
+/* 注册弹窗 关闭图标的设置 */
+.sign_up .close1 {
+    width: 25px;
+    height: 25px;
+    background-image: url(images/close2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    left: 235px;
+    bottom: -10px;
+    cursor: pointer;
+}
+
+/* 注册弹窗的其余元素的相关位置设置 */
+ .sign_up .one {
+    position: relative;
+    left: -8px;
+    bottom: -15px;
+}
+
+ .sign_up .two {
+    position: relative;
+    left: -8px;
+    bottom: -15px;
+}
+
+ .sign_up .three {
+    position: relative;
+    left: 13px;
+    bottom: -15px;
+}
+
+ .sign_up .four {
+    position: relative;
+    left: 13px;
+    bottom: -15px;
+}
+
+ .sign_up .five {
+    position: relative;
+    bottom: -45px;
+}
+
+/* 登录弹窗的相关设置 */
+.sign_in {
+    margin: 0 auto;
+    width: 275px;
+    height: 200px;
+    line-height: 20px;
+    border-radius: 26px;
+    background-color: rgba(255, 250, 250, 1);
+    text-align: center;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(79, 79, 79, 1);
+    z-index: 21;
+    position: relative;
+    top: 100px;
+    display: none;
+}
+
+/* 登录弹窗 关闭图标的设置 */
+ .sign_in .close2 {
+    width: 25px;
+    height: 25px;
+    background-image: url(images/close2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    left: 235px;
+    bottom: -10px;
+    cursor: pointer;
+}
+
+/* 登录弹窗其余元素相关位置的设置 */
+ .sign_in .in_one {
+    position: relative;
+    bottom: -10px;
+}
+
+.sign_in .in_two {
+    position: relative;
+    bottom: -15px;
+}
+
+.sign_in .in_three {
+    position: relative;
+    bottom: -30px;
+}
+
+.wrong {
+    background-image: url(../imagines/wrong.png);
+}
+
+.right {
+    background-image: url(../imagines/suss.png);
+}
